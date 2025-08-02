@@ -15,14 +15,17 @@
     <ul id="numberList"></ul>
     
     <script>
+        // Variable declaration for message visibility
         let isMessageVisible = false;
 
+        // Function to show/hide the message
         function toggleMessage() {
             isMessageVisible = !isMessageVisible;
             const messageDiv = document.getElementById('message');
             messageDiv.style.display = isMessageVisible ? 'block' : 'none';
         }
 
+        // Function to generate a list of numbers using a loop
         function generateNumberList() {
             const listElement = document.getElementById('numberList');
             for (let i = 1; i <= 20; i++) {
@@ -32,7 +35,10 @@
             }
         }
 
+        // Event listener for button click (DOM interaction)
         document.getElementById('toggleButton').addEventListener('click', toggleMessage);
+
+        // Call function to create the number list on page load
         generateNumberList();
     </script>
 </body>
